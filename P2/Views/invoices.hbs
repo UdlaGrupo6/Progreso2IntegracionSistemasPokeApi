@@ -1,0 +1,31 @@
+<h1 class="mb-4">Facturas</h1>
+<table class="table table-bordered">
+    <thead class="thead-light">
+        <tr>
+            <th scope="col">ID Factura</th>
+            <th scope="col">ID Orden</th>
+            <th scope="col">Fecha</th>
+            <th scope="col">Total</th>
+            <th scope="col">Nombre del Cliente</th>
+            <th scope="col">Email del Cliente</th>
+            <th scope="col">Dirección del Cliente</th>
+            <th scope="col">Nombre del Producto</th>
+            <th scope="col">Cantidad</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each facturas}}
+            <tr>
+                <td>{{this.factura_id}}</td>
+                <td>{{this.orden_id}}</td>
+                <td>{{this.fecha}}</td>
+                <td>{{this.total}}</td>
+                <td>{{this.cliente_nombre}}</td>
+                <td>{{this.cliente_email}}</td>
+                <td>{{this.cliente_direccion}}</td>
+                <td>{{this.producto_nombre}}</td>
+                <td>{{this.producto_cantidad}}</td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
